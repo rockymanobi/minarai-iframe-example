@@ -1,0 +1,71 @@
+
+
+#minarai-chat-container{
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  transition: transform 0.3s;
+  transform-origin: 90% 90%;
+
+  border: solid 1px #888888;
+  border-radius: 4px;
+  overflow: hidden;
+  transform: scale(0,0) ;
+}
+
+#minarai-chat-container.opend{
+  transform: scale(1, 1);
+  animation: minarai_scale_bound 0.3s normal ease 1;
+  /* transform-origin: bottom left; */
+}
+
+#minarai-chat-header{
+  height: 35px;
+  box-sizing: border-box;
+  padding-right: 10px;
+  line-height: 35px;
+  text-align: right;
+}
+.minarai-chat-header{
+  background: #36628F;
+  color: white;
+}
+
+#minarai-chat-iframe{
+  border: none;
+  height: 400px;
+}
+
+#minarai-icon-circle{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+
+  transition: transform  ease-out 0.3s ,opacity 0.3s;
+
+}
+
+.minarai-icon-circle{
+  background: #36628F;
+  background-image: url("./icon.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center center;
+}
+
+#minarai-icon-circle.invisible{
+  opacity: 0;
+  transform: translateY(40px) scale3d(0,0,0);
+}
+
+@keyframes minarai_scale_bound {
+  0% { transform: scale(0, 0) rotate3d(30,30,30,-10deg);}
+  70% { transform: scale(1.05, 1.05) rotate3d(30,30,30,-2deg); }
+  100% { transform: scale(1, 1) rotate3d(30,30,30,0deg); }
+}

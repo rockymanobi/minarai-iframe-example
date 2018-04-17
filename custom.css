@@ -1,0 +1,8 @@
+
+/* ヘッダやアイコンの色を変更するには、このようなCSSを作成してHTMLに読み込ませる */
+#minarai-icon-circle{
+  /* background-color: rgba(0,100,100,1); */
+}
+#minarai-chat-header{
+  /* background-color: rgba(0,100,100,1); */
+}
